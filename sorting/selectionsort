@@ -4,6 +4,14 @@
 #similarly you need n scans of n elements to sort using selection sorting
 #in python, anything upto 10^7 steps would take less than 1 second. more than this, you may consider the algorithm to be inefficient for that number of input.
 #for eg: with selection sort, inputs upto list size of less than 1000 is ok. any size more than that, would take longer
+#efficiency - n^2
+#input of size - n^2
+# 10 - 100
+# 100 - 10^4
+# 1000 - 10^6
+# 10^4 - 10^8
+# as you see this one is efficient until input size of 1000. For 10^4, steps required are in range of 10^8, which would be more than 1 second
+# remember 10^7 ~ 1 sec in python
 
 def selsort(listl):
 
