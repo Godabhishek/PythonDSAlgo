@@ -1,1 +1,16 @@
 
+#T(n) = n + (n-1) + (n-2)+..+1 = n(n+1)/2 = O(n^2)
+#in one scan of k steps, in a list of k elements, we can find minimum in that list
+#similarly you need n scans of n elements to sort using selection sorting
+#in python, anything upto 10^7 steps would take less than 1 second. more than this, you may consider the algorithm to be inefficient for that number of input.
+#for eg: with selection sort, inputs upto list size of less than 1000 is ok. any size more than that, would take longer
+
+def selsort(listl):
+
+    for start in range(len(list1)):
+        minpos = start
+
+        for i in range(minpos,len(list1)):
+            if list1[i] < list1[minpos]:
+                (list1[i],list1[minpos]) = (list1[minpos],list1[i])
+ 
