@@ -3,6 +3,7 @@ def search (seq,v,l,r):
 #seq from [l:r]; seq is sorted;
 #only for arrays its possible, but not for lists
 #time taken is log(r). for eg: if seq is 1000 entries, it needs 10 steps (2^10 = 1024) to complete a search
+#efficency --> O(log n)
     
 
     if( r -l == 0):
