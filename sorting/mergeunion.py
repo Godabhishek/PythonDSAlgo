@@ -28,7 +28,7 @@ def merge(A,B): # merge A[0:m],B[0:n]
             j = j+1
 
         elif (A[i] == B[j]):#head of A and B are equal
-            while (j+1 < n and A[i] == B[j]):
+            while (j < n and A[i] == B[j]):
                     j = j+1
             while (i+1 < m and (A[i] == A[i+1])):
                 i = i+1
