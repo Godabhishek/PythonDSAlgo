@@ -10,7 +10,7 @@ def init_board(n):
         board['col'][i]=0
     for i in range (-(n-1),n):
         board['NwtoSE'][i]=0
-    for i in range (0, 2*(n-1)):
+    for i in range (0, 2*n-1):
         board['SWtoNE'][i]=0
 
 
