@@ -68,7 +68,54 @@ class Tree:
         if (self.right.isempty()):
             return(self.value)
         else:
-            return(self.right.minval())
+            return(self.right.maxval())
 
+    #find
+    def find(self,v):
+        if self.isempty():
+            return False
+        if self.value == v:
+            return True
+        else:
+            if(v < self.value):
+                return(self.left.find(v))
+            else:
+                return(self.right.find(v))
 
+    def makeempty(self):
+        self.value = None
+        self.left = None
+        self.right = None
+        return
+    
+    def copy_right(self):
+        self.value = self.right.value
+        self.left = self.right.left
+        self.right = self.right.right
+        return
+    
+    #delete v
+    def delete(self,v):
+        if self.isempty():
+            return False
+
+        if v < self.value:
+            self.left.delete(v)
+            return
+        
+        if v > self.value:
+            self.right.delete(v)
+            return
+        
+        if v == self.value:
+            if self.isleaf():
+                self.makeempty()
+
+            elif self.left.isempty():
+                self.copy_right()
+
+            else:
+                self.value = self.left.maxval()
+                self.left.delete(self.left.maxval())
+            return
         
